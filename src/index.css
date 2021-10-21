@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Cinzel+Decorative");
+* {
+  box-sizing: border-box; }
+
+h1, h2, h3 {
+  font-family: 'Cinzel Decorative', Arial, Helvetica, sans-serif; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Bellefair', serif;
+  font-size: 16pt;
+  background: #121621; }

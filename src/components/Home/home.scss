@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative');
+
+.main-nav {
+    position: relative;
+    z-index: 100;
+    background: rgba(18,22,34,0.5);
+    ul {
+        list-style: none;
+        margin: 0;
+        width: auto;
+        padding: 5px;
+        border-radius: 5px;
+    }
+    li {
+        margin: 5px;
+        display: inline-block;
+        height: 64px;
+        border: 1px solid red;
+    }
+    p {
+        margin: 0;
+        padding: 0;
+        color: white;
+        text-decoration: none;
+        font-weight: lighter;
+        font-size: 12px;
+    }
+}
+
+.parallax {
+  perspective: 100px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+@media all and (max-width: 850px) {
+    .parallax {
+        perspective: none;
+    }
+    .parallax-layer {
+        display: none;
+        height: 0;
+    }
+    .parallax-cover {
+        top: 0;
+    }
+}
+
+.parallax-layer{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  img{
+    display: block;
+    position: absolute;
+    top: 0;
+  }
+}
+
+.parallax-cover{
+  background: #121621;
+  position: absolute;
+  display: block;
+  top: 608px;
+  left: 0;
+  right: 0;
+//   height: auto;
+  z-index: 2;
+//   padding-top: 57px;
+  h1, p{
+      color: white;
+      margin: 0;
+  }
+  .main-head {
+      margin-bottom: 34px;
+  }
+}
+
+
+$parallaxLayers: 3;
+
+@for $i from 0 through $parallaxLayers {
+  $x: ($parallaxLayers - $i) / 2;
+  .layer-#{$i}{
+      max-width: 1100px;
+      margin: auto;
+     transform: translateZ(-100 * $x#{px}) scale($x + 1);
+  }
+}
+
+.layer-0 {
+    top: 370px;
+}
+
+.layer-1 {
+    top: -26px;
+}
+.layer-2 {
+    top: 76px;
+}
+
+.layer-3 {
+    top: -48px;
+}
+
+.home-links {
+    width: 100vw;
+    color: #fff;
+    .link-box {
+        width: 28%;
+        display: inline-block;
+        margin: 1%;
+        vertical-align: top;
+        h3 {
+            color: white;
+        }
+        .uvu-image {
+            background: url('./components/Home/uvu.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 150px;
+            width: 100%;
+        }
+        .start-image {
+            background: url('./components/Home/syndicate1.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 150px;
+            width: 100%;
+        }
+        .guilds-image {
+            background: url('./components/Home/sheepflock.jpg');
+            background-position: center;
+            background-size: cover;
+            height: 150px;
+            width: 100%;
+        }
+        img {
+            max-height: 140px;
+            margin-top: -66px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.home-start-section {
+    height: 600px;
+    width: 100vw;
+    background: #A4AEB8;
+    margin-top: 50px;
+}
+
+.home-magics-section {
+    height: 600px;
+    width: 100vw;
+    ul {
+        color: #fff;
+    }
+}
+
+.home-rp-section {
+    height: 600px;
+    width: 100vw;
+}

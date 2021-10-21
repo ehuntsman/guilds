@@ -1,0 +1,35 @@
+@import './index.scss';
+@import './components/Home/home.scss';
+@import './components/Stormwind/stormwind.scss';
+@import './components/Planes/planes.scss';
+@import './components/Races/races.scss';
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #121621;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+ul {
+  list-style: none;
+  -webkit-padding-start: 0;
+}
